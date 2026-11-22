@@ -104,6 +104,12 @@ const allReasons = [
   "Ты — моя самая надёжная поддержка в любой ситуации."
 ];
 
+// ==== КОНТРОЛЬ: точно 101 ====
+console.log("Всего причин:", allReasons.length);
+if (allReasons.length !== 101) {
+  console.warn("⚠️ Причин не 101, а:", allReasons.length);
+}
+
 // ==== Хранилище ====
 const STORAGE_KEY = "envelopes_opened_v101";
 let openedSet = new Set(JSON.parse(localStorage.getItem(STORAGE_KEY) || "[]"));
